@@ -1,7 +1,7 @@
 # Mini-Curso Backend: CRUD Simples
 
 ## Roteiro
- Utilize o documento 📃[Roteiro_Mini-Curso-Backend](https://github.com/EstudosCpid/mini-curso-backend-2025/blob/main/Roteiro_Mini-Curso-Backend.md) deste projeto para construir o seu projeto, seguindo deste a preparação do seu ambiente até a execução do projeto. Os códigos mostrados durante o tutorial estão na pasta `/docs-mini-curso` para facilitar a implementação. Bons estudos!
+ Utilize o documento 📃[Roteiro_Mini-Curso-Backend](https://github.com/EstudosCpid/mini-curso-backend-2025/blob/main/Roteiro_Mini-Curso-Backend.md) deste projeto para construir o seu projeto, seguindo deste a preparação do seu ambiente até a execução do projeto. 
 
 ## O Projeto final
 
