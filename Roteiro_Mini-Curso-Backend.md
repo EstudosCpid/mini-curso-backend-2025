@@ -462,7 +462,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.settings.database import get_session
-from app.schemas.company import CompanyCreateRequest
+from app.schemas.company import CompanyRequest
 from app.models.company import Company
 
 router = APIRouter(prefix="/company", tags=["Company"])
@@ -522,15 +522,12 @@ Fazer um update está diretamente ligado à requisições `PUT`, então adicione
 ## adicionar no from sqlalchemy o import: update
 from sqlalchemy import select, update
 
-## adicionar no from app.schemas.company o import: CompanyUpdateRequest
-from app.schemas.company import CompanyCreateRequest, CompanyUpdateRequest
-
 #código omitido
 
 @router.put("/update/{company_name}", status_code=status.HTTP_200_OK)
 async def company_update(
     company_name: str,
-    company: CompanyUpdateRequest,
+    company: CompanyRequest,
     session: Session = Depends(get_session),
 ):
     if not company_exists(company_name, session):
