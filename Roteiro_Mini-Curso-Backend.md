@@ -349,7 +349,7 @@ Dentro da pasta **models/** crie um arquivo `company.py` para representar a tabe
 - **Telephone:** O número de telefone da empresa; (20)
 - **Address:** O endereço físico da empresa. (200)
 
-Os tipos de dados de cada linha da tabela são Strings, exceto pelo ID, que é um inteiro, e o tamanho máximo de cada string está entre parênteses. Dentro do arquivo `company.py` importe `DeclarativeBase, MappedColumn, mapped_column` da biblioteca `sqlalchemy.orm` para que possamos criar nossa classe modelo:
+Os tipos de dados de cada linha da tabela são Strings, exceto pelo ID, que é um inteiro, e o tamanho máximo de cada string está entre parênteses. Dentro do arquivo `company.py` importe `DeclarativeBase, Mapped, mapped_column` da biblioteca `sqlalchemy.orm` para que possamos criar nossa classe modelo:
 
 ```python
 # app/models/company.py
@@ -361,7 +361,7 @@ from app.settings.database import Base
 class Company(Base):
 	__tablename__ = "company"
 	
-	id: MappedColumn[BigInteger] = mapped_column(
+	id: Mapped[BigInteger] = mapped_column(
 		BigInteger,
 		primary_key=True,
 		autoincrement=True,
