@@ -351,6 +351,14 @@ Dentro da pasta **models/** crie um arquivo `company.py` para representar a tabe
 
 Os tipos de dados de cada linha da tabela são Strings, exceto pelo ID, que é um inteiro, e o tamanho máximo de cada string está entre parênteses. Dentro do arquivo `company.py` importe `DeclarativeBase, Mapped, mapped_column` da biblioteca `sqlalchemy.orm` para que possamos criar nossa classe modelo:
 
+Vamos primeiro criar a pasta e o arquivo:
+
+```bash
+mkdir app/models
+touch app/models/company.py
+```
+E agora podemos editar nosso `models/company.py`:
+
 ```python
 # app/models/company.py
 from sqlalchemy import BigInteger
@@ -434,9 +442,17 @@ alembic upgrade head
 
 Os schemas são padronizações, formas da nossa aplicação dizer o que ela espera receber e o que ela vai responder, vamos criar nossos `schemas` :
 
-app/schemas/company.py
+Primeiro vamos criar a pasta e o arquivo dentro dessa pasta:
+
+```bash
+mkdir app/schemas
+touch app/schemas/company.py
+```
+Agora podemos editar nosso arquivo com o código abaixo:
 
 ```python
+#app/schemas/company.py
+
 from pydantic import BaseModel
 
 class CompanyRequest(BaseModel):
