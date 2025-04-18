@@ -259,8 +259,8 @@ app/
 Use os comandos abaixo no terminal linux para criar os arquivos:
 
 ```bash
-mkdir settings
-cd settings
+mkdir app/settings
+cd app/settings
 touch .env config.py database.py
 ```
 
