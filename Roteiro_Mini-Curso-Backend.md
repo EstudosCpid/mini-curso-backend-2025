@@ -197,7 +197,7 @@ from app.routers import company
 # [...]  código omitido
 
 ## adicione este include:
-app.include_router(company.routers)
+app.include_router(company.router)
 ```
 
 # 7. Banco de Dados
